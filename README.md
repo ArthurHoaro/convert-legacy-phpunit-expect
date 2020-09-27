@@ -33,7 +33,7 @@ public function testSomeCoreMethod(): void
 {
     $this->expectException(\ArthurHoaro\ConvertLegacyPHPUnitExpect\ConverterException::class);
     $this->expectExceptionCode(123);
-    $this->expectExceptionMessage('This');
+    $this->expectExceptionMessage('This is unacceptable');
     $this->expectExceptionMessageMatches('/You shouldn\'t mix message and regexp/');
 
     $this->assertTrue(true);
@@ -81,7 +81,7 @@ Successfully used on [Shaarli](https://github.com/shaarli/Shaarli) code-base.
 > Files processed: 109
 > Files converted: 21
 
-See
+See [shaarli/Shaarli#1572](https://github.com/shaarli/Shaarli/pull/1572).
 
 ## License
 
