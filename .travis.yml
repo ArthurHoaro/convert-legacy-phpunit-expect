@@ -1,0 +1,16 @@
+dist: bionic
+
+matrix:
+  include:
+    - language: php
+      php: 7.4
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+install:
+  - composer install --prefer-dist
+
+script:
+  - vendor/bin/phpunit
