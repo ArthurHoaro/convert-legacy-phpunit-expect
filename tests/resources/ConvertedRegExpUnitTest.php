@@ -57,6 +57,13 @@ class LegacyUnitTest extends TestCase
         $this->assertTrue(true);
     }
 
+    public function testWithMoreSpaces(): void
+    {
+        $this->expectException(\ArthurHoaro\ConvertLegacyPHPUnitExpect\ConverterException::class);
+
+        $this->assertTrue(true);
+    }
+
     public function testLeaveMeAlone(): void
     {
         $this->expectException(\ArthurHoaro\ConvertLegacyPHPUnitExpect\ConverterException::class);

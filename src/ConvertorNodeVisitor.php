@@ -63,7 +63,7 @@ class ConvertorNodeVisitor extends NodeVisitorAbstract
 
     protected function convertExpectException(string $commentLine): bool
     {
-        if (!preg_match('/@expectedException ([^\s]+)/', $commentLine, $matches)) {
+        if (!preg_match('/@expectedException\s+(.+)/', $commentLine, $matches)) {
             return false;
         }
 
@@ -81,7 +81,7 @@ class ConvertorNodeVisitor extends NodeVisitorAbstract
 
     protected function convertExpectExceptionMessage(string $commentLine)
     {
-        if (!preg_match('/@expectedExceptionMessage (.+)/', $commentLine, $matches)) {
+        if (!preg_match('/@expectedExceptionMessage\s+(.+)/', $commentLine, $matches)) {
             return false;
         }
 
@@ -96,7 +96,7 @@ class ConvertorNodeVisitor extends NodeVisitorAbstract
 
     protected function convertExpectExceptionMessageRegex(string $commentLine)
     {
-        if (!preg_match('/@expectedExceptionMessageRegExp (.+)/', $commentLine, $matches)) {
+        if (!preg_match('/@expectedExceptionMessageRegExp\s+(.+)/', $commentLine, $matches)) {
             return false;
         }
 
@@ -115,7 +115,7 @@ class ConvertorNodeVisitor extends NodeVisitorAbstract
 
     protected function convertExpectExceptionCode(string $commentLine)
     {
-        if (!preg_match('/@expectedExceptionCode (\d+)/', $commentLine, $matches)) {
+        if (!preg_match('/@expectedExceptionCode\s+(\d+)/', $commentLine, $matches)) {
             return false;
         }
 
